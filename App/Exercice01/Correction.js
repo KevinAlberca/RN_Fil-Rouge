@@ -47,9 +47,9 @@ export default class Exercice01C extends Component {
     }
 
     componentDidMount() {
-        this.cycleAnimation();    
+        this.cycleAnimation();
     }
-    
+
     render() {
         return (
             <View style={styles.container}>
