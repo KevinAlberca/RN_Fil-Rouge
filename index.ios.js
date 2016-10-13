@@ -7,8 +7,8 @@
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 
-// import Exercice01 from './App/Exercice01/Container';
-import Exercice01C from './App/Exercice01/Correction';
-// import Exercice02 from './App/Exercice02/Container';
+// import Exercice01 from './App/Exercice01/Container'; // Exercice 01
+// import Exercice01C from './App/Exercice01/Correction'; // Correction 01
+import Exercice02 from './App/Exercice02/Container'; // Exercice 02
 
-AppRegistry.registerComponent('Fil_Rouge', () => Exercice01C);
+AppRegistry.registerComponent('Fil_Rouge', () => Exercice02);
