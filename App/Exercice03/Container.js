@@ -30,7 +30,6 @@ export default class Exercice03 extends Component {
         this.urlToFetch = this.state.apiUrl + "contract=" + this.state.contractName + "&apiKey=" + this.state.apiKey;
         this._getMoviesFromApiAsync();
 
-        // this._renderList = this._renderList().bind(this.state.dataSource);
     }
 
     _getMoviesFromApiAsync() {
@@ -46,25 +45,6 @@ export default class Exercice03 extends Component {
           console.error(error);
         });
     }
-
-    // _renderList(rowData) {
-    //     return (
-    //         <View>
-    //             <Text>{rowData.number}</Text>
-    //             <Text>{rowData.name}</Text>
-    //             <Text>{rowData.adress}</Text>
-    //             <Text>{rowData.banking}</Text>
-    //             <Text>{rowData.bonus}</Text>
-    //             <Text>{rowData.status}</Text>
-    //             <Text>{rowData.contract_name}</Text>
-    //             <Text>{rowData.bike_stands}</Text>
-    //             <Text>{rowData.available_bike_stands}</Text>
-    //             <Text>{rowData.available_bikes}</Text>
-    //             <Text>{rowData.last_update}</Text>
-    //         </View>
-    //     )
-    //
-    // }
 
     render() {
         return (
