@@ -1,28 +1,31 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+// /**
+//  * Sample React Native App
+//  * https://github.com/facebook/react-native
+//  * @flow
+//  */
 
 import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Dimensions
 } from 'react-native';
+
+var {height, width} = Dimensions.get('window');
 
 export default class Messages extends Component {
     constructor(props) {
-        super(props)
-        console.log(props)
+        super(props);
     }
 
     render() {
-      var state = this.props.type;
         return (
-            <View>
-                <Text style={styles[this.props.type]}>{this.props.content}</Text>
+            <View style={styles.messages}>
+              <View style={styles[this.props.type]}>
+                <Text>{this.props.content}</Text>
+              </View>
             </View>
         )
     }
@@ -30,19 +33,36 @@ export default class Messages extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+  messages: {
+    // borderColor: 'red',
+    // borderStyle: 'solid',
+    // borderWidth: 2,
+    // marginTop: 5,
+    // marginBottom: 5,
+    // borderRadius: 10,
+    flexDirection:'row',
+    borderColor:'black',
+    borderWidth:1,
+    flexWrap: 'wrap',
   },
   sended: {
-    backgroundColor: '#eee',
-    color: '#333'
+    width: width / 1.25,
+    backgroundColor:'blue',
+    alignItems:'flex-start',
+    justifyContent:'center',
+    padding: 5,
+    position: 'relative',
+    marginLeft: 0,
+    left: 0,
   },
   received: {
-    backgroundColor: '#333',
-    color: '#eee'
+    flex:1,
+    backgroundColor:'yellow',
+    alignItems:'center',
+    justifyContent:'center',
+    // backgroundColor: 'ghostwhite',
+    // color: 'deepskyblue',
+    padding: 5,
   },
 });
 
