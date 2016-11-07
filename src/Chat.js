@@ -36,7 +36,7 @@ export default class Chat extends Component {
           <ListView
             dataSource={this.state.dataSource}
             renderRow={(m) => <View style={mStyle.messages}><View style={mStyle[m.type]}><Text>{m.message}</Text></View></View>}
-            renderHeader={() => <View><Text>Hello World !</Text></View>}
+            renderHeader={() => <View style={mStyle.header}><Text style={{textAlign: 'center'}}>Our Messages !</Text></View>}
             enableEmptySections
           />
         <View style={inputStyle.container}>
@@ -61,7 +61,7 @@ export default class Chat extends Component {
             }
               style={inputStyle.button}
             >
-                <Text>Text</Text>
+                <Text style={inputStyle.submit}>Submit</Text>
             </TouchableHighlight>
         </View>
       </View>
@@ -84,24 +84,35 @@ const inputStyle = StyleSheet.create({
     backgroundColor: '#F5FCFF',
     position: 'absolute',
     bottom: 0,
+    flexDirection: 'row',
   },
   textInput: {
-    flex: 1,
+    flex: 5,
     height: 47,
-    marginRight: 100,
     paddingLeft: 10,
     fontSize: 17,
-    backgroundColor: 'green',
     borderWidth: 0,
     borderRadius: 4,
   },
   button: {
-    width: 50,
-    backgroundColor: 'red',
+    flex:1,
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center'
   },
+  submit: {
+    textAlign: 'center',
+  }
 });
 
 const mStyle = StyleSheet.create({
+  header: {
+    width: width,
+    flex: 1,
+    backgroundColor: 'deepskyblue',
+    paddingTop:20,
+    paddingBottom: 5
+  },
   messages: {
     width:width,
     flex: 1,
