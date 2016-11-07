@@ -27,9 +27,10 @@ export default class MessageInput extends Component {
     render () {
       return (
         <View style={styles.container}>
-            <KeyboardAwareScrollView style={styles.keasv} getTextInputRefs={() => { return [this._textInputRef];}}>
-                <TextInput style={styles.textInput} placeholder={'Send a text message'} ref={(r) => { this._notesTI = r; }} returnKeyType={'go'}/>
-            </KeyboardAwareScrollView>
+            <TextInput
+                style={styles.textInput}
+                placeholder={'Send a text message'}
+            />
         </View>
       )
     }
